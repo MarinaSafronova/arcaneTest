@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Sources</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap&_v=20240408224319" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/style.css?_v=20240408224319" />
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-settings">
+			<div class="d-flex">
+				<div class="header-info">
+					<div class="header-info__col">
+						<a href="#" class="header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture>
+						</a>
+						<a href="#" class="header__link">Terminal</a>
+					</div>
+					<div class="header-info__col">
+						<a href="#" class="btn btn-settings active"> Settings </a>
+						<a href="#" class="btn btn-nuke"> Nuke All </a>
+					</div>
+				</div>
+				<div class="header-btns">
+					<div class="header-info__col">
+						<div class="header-balance" id="header-balance"><span>$51,401.07</span></div>
+						<div class="header-time">12:32:57.301 AM (UTC)</div>
+					</div>
+					<div class="part-btns">
+						<span class="turned" id="turned">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+								<path d="M10 10L19 10M10 1L10 19M5.8 1H14.2C15.8802 1 16.7202 1 17.362 1.32698C17.9265 1.6146 18.3854 2.07354 18.673 2.63803C19 3.27976 19 4.11984 19 5.8V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V5.8C1 4.11984 1 3.27976 1.32698 2.63803C1.6146 2.07354 2.07354 1.6146 2.63803 1.32698C3.27976 1 4.11984 1 5.8 1Z" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="sound" id="turned-sound">
+						</span>
+						<span class="mode" id="turned-mode"></span>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<path d="M12.5556 13.4444L17 9M17 9L12.5556 4.55556M17 9H6.33333M6.33333 1H5.26667C3.77319 1 3.02646 1 2.45603 1.29065C1.95426 1.54631 1.54631 1.95426 1.29065 2.45603C1 3.02646 1 3.77319 1 5.26667V12.7333C1 14.2268 1 14.9735 1.29065 15.544C1.54631 16.0457 1.95426 16.4537 2.45603 16.7094C3.02646 17 3.77319 17 5.26667 17H6.33333" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="settings-page">
+				<div class="sidebar">
+					<ul>
+						<li>
+							<a class="api-management" href="api-management.html">API Management</a>
+						</li>
+						<li>
+							<a class="key-binds" href="key-binds.html">Key Binds</a>
+						</li>
+						<li>
+							<a class="trading-preferences" href="trading-preferences.html">Trading Preferences</a>
+						</li>
+						<li>
+							<a class="sound-preferences" href="sound-preferences.html">Sound Preferences</a>
+						</li>
+						<li>
+							<a class="active nav-sources" href="sources.html">Sources</a>
+						</li>
+						<li>
+							<a class="auto-trade" href="auto-trade.html">Auto Trade</a>
+						</li>
+						<li>
+							<a class="nav-subscription" href="subscription.html">Subscription</a>
+						</li>
+					</ul>
+				</div>
+				<div class="settings-content">
+					<div class="settings-header">
+						<h2 class="settings-header__title">Sources</h2>
+						<p class="settings-header__text">All settings related to news.</p>
+					</div>
+					<div class="settings-inner">
+						<div class="sources-content">
+							<div class="row">
+								<div class="col-max">
+									<div data-tabs class="tabs">
+										<nav data-tabs-titles class="tabs__navigation">
+											<button type="button" class="tabs__title _tab-active">Medium</button>
+											<button type="button" class="tabs__title">Twitter</button>
+										</nav>
+										<div data-tabs-body class="tabs__content">
+											<div class="tabs__body">
+												<div class="box-source">
+													<h3>Enter the source link</h3>
+													<form class="form-sources" id="form-sources-value">
+														<div class="d-flex">
+															<input type="text" class="input" placeholder="Enter link" />
+															<button type="submit" class="btn btn-secondary">Add</button>
+														</div>
+													</form>
+													<div class="links">
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item.webp" type="image/webp"><img src="img/item.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-1" checked />
+																	<label for="item-checkbox-1" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-2.webp" type="image/webp"><img src="img/item-2.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-2" checked />
+																	<label for="item-checkbox-2" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-3.webp" type="image/webp"><img src="img/item-3.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-3" checked />
+																	<label for="item-checkbox-3" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-4.webp" type="image/webp"><img src="img/item-4.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-4" checked />
+																	<label for="item-checkbox-4" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-5.webp" type="image/webp"><img src="img/item-5.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-5" checked />
+																	<label for="item-checkbox-5" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-6.webp" type="image/webp"><img src="img/item-6.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-6" checked />
+																	<label for="item-checkbox-6" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-7.webp" type="image/webp"><img src="img/item-7.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-7" checked />
+																	<label for="item-checkbox-7" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tabs__body">
+												<div class="box-source">
+													<h3>Enter the source link</h3>
+													<form class="form-sources">
+														<div class="d-flex">
+															<input type="text" class="input" placeholder="Enter link" />
+															<button type="submit" class="btn btn-secondary">Add</button>
+														</div>
+													</form>
+													<div class="links">
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-7.webp" type="image/webp"><img src="img/item-7.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-8" checked />
+																	<label for="item-checkbox-8" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-2.webp" type="image/webp"><img src="img/item-2.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-9" checked />
+																	<label for="item-checkbox-9" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-3.webp" type="image/webp"><img src="img/item-3.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-10" checked />
+																	<label for="item-checkbox-10" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-4.webp" type="image/webp"><img src="img/item-4.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-11" checked />
+																	<label for="item-checkbox-11" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-5.webp" type="image/webp"><img src="img/item-5.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-12" checked />
+																	<label for="item-checkbox-12" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-6.webp" type="image/webp"><img src="img/item-6.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-13" checked />
+																	<label for="item-checkbox-13" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+														<div class="active-link">
+															<div class="text">
+																<picture><source srcset="img/item-7.webp" type="image/webp"><img src="img/item-7.png" alt="Arcane" /></picture>
+																<a href="#">https://twitter.com/sfdgdsgwg</a>
+															</div>
+															<div class="line-btns">
+																<div class="checkbox">
+																	<input type="checkbox" class="checkbox__input" id="item-checkbox-14" checked />
+																	<label for="item-checkbox-14" class="checkbox__label">
+																		Active
+																	</label>
+																</div>
+																<div class="item-delete">
+																	<div class="delete"></div>
+																	<span>Delete</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-max">
+									<div class="box-source">
+										<h2 class="title">Add TreeNews API key</h2>
+										<form class="form-sources">
+											<div class="d-flex">
+												<input type="text" class="input" placeholder="Enter API Key" />
+												<button type="submit" class="btn btn-secondary">Add</button>
+											</div>
+										</form>
+										<div class="api-line">
+											<p class="api-key-line"><span>fj29</span>*********************************************<span>gjr3</span></p>
+											<div class="line-btns">
+												<div class="checkbox">
+													<input type="checkbox" class="checkbox__input" id="item-checkbox-15" checked />
+													<label for="item-checkbox-15" class="checkbox__label">
+														Active
+													</label>
+												</div>
+												<div class="item-delete">
+													<div class="delete"></div>
+													<span>Delete</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="box-source">
+										<h2 class="title">Add PhoenixNews API key</h2>
+										<form class="form-sources">
+											<div class="d-flex">
+												<input type="password" class="input" placeholder="Enter link" value="******************************************************************" />
+												<button type="submit" class="btn btn-secondary">Add</button>
+											</div>
+										</form>
+										<div class="api-line">
+											<p class="api-key-line"><span>fj29</span>*********************************************<span>gjr3</span></p>
+											<div class="line-btns">
+												<div class="checkbox">
+													<input type="checkbox" class="checkbox__input" id="item-checkbox-16" checked />
+													<label for="item-checkbox-16" class="checkbox__label">
+														Active
+													</label>
+												</div>
+												<div class="item-delete">
+													<div class="delete"></div>
+													<span>Delete</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="js/app.min.js?_v=20240408224319"></script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Trading Preferences</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap&_v=20240408224319" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/style.css?_v=20240408224319" />
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-settings">
+			<div class="d-flex">
+				<div class="header-info">
+					<div class="header-info__col">
+						<a href="#" class="header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture>
+						</a>
+						<a href="#" class="header__link">Terminal</a>
+					</div>
+					<div class="header-info__col">
+						<a href="#" class="btn btn-settings active"> Settings </a>
+						<a href="#" class="btn btn-nuke"> Nuke All </a>
+					</div>
+				</div>
+				<div class="header-btns">
+					<div class="header-info__col">
+						<div class="header-balance" id="header-balance"><span>$51,401.07</span></div>
+						<div class="header-time">12:32:57.301 AM (UTC)</div>
+					</div>
+					<div class="part-btns">
+						<span class="turned" id="turned">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+								<path d="M10 10L19 10M10 1L10 19M5.8 1H14.2C15.8802 1 16.7202 1 17.362 1.32698C17.9265 1.6146 18.3854 2.07354 18.673 2.63803C19 3.27976 19 4.11984 19 5.8V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V5.8C1 4.11984 1 3.27976 1.32698 2.63803C1.6146 2.07354 2.07354 1.6146 2.63803 1.32698C3.27976 1 4.11984 1 5.8 1Z" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="sound" id="turned-sound">
+						</span>
+						<span class="mode" id="turned-mode"></span>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<path d="M12.5556 13.4444L17 9M17 9L12.5556 4.55556M17 9H6.33333M6.33333 1H5.26667C3.77319 1 3.02646 1 2.45603 1.29065C1.95426 1.54631 1.54631 1.95426 1.29065 2.45603C1 3.02646 1 3.77319 1 5.26667V12.7333C1 14.2268 1 14.9735 1.29065 15.544C1.54631 16.0457 1.95426 16.4537 2.45603 16.7094C3.02646 17 3.77319 17 5.26667 17H6.33333" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="settings-page">
+				<div class="sidebar">
+					<ul>
+						<li>
+							<a class="api-management" href="api-management.html">API Management</a>
+						</li>
+						<li>
+							<a class="key-binds" href="key-binds.html">Key Binds</a>
+						</li>
+						<li>
+							<a class="active trading-preferences" href="trading-preferences.html">Trading Preferences</a>
+						</li>
+						<li>
+							<a class="sound-preferences" href="sound-preferences.html">Sound Preferences</a>
+						</li>
+						<li>
+							<a class="nav-sources" href="sources.html">Sources</a>
+						</li>
+						<li>
+							<a class="auto-trade" href="auto-trade.html">Auto Trade</a>
+						</li>
+						<li>
+							<a class="nav-subscription" href="subscription.html">Subscription</a>
+						</li>
+					</ul>
+				</div>
+				<div class="settings-content">
+					<div class="settings-header">
+						<h2 class="settings-header__title">Trading Preferences</h2>
+						<p class="settings-header__text">
+							Add new connections or delete current connections.
+						</p>
+					</div>
+					<div class="settings-inner">
+						<div class="trading-preferences-content">
+							<div class="preferences-box">
+								<h3>Standard size presets</h3>
+								<p>
+									Enter your preferred size when clicking the buy/short
+									buttons.
+								</p>
+								<div class="row-box">
+									<div class="row-box-items">
+										<input type="number" class="input" value="2" />
+										<input type="number" class="input" value="5" />
+										<input type="number" class="input" value="10" />
+										<input type="number" class="input" value="20" />
+									</div>
+									<div class="row-box-checkbox">
+										<div class="checkbox">
+											<input name="standard-presets" type="checkbox" class="checkbox__input" id="standard-presets-checkbox-1" />
+											<label for="standard-presets-checkbox-1" class="checkbox__label">
+												Notional
+											</label>
+										</div>
+										<div class="checkbox">
+											<input name="standard-presets" type="checkbox" class="checkbox__input" id="standard-presets-checkbox-2" checked />
+											<label for="standard-presets-checkbox-2" class="checkbox__label">
+												QTY
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Size presets</h3>
+								<p>
+									Choose a coin and then choose the preferred size when
+									clicking the buy/short buttons.
+								</p>
+								<select data-show-selected name="form[]" data-class-modif="form">
+									<option value="XRP" selected>XRP</option>
+									<option value="2">option</option>
+									<option value="3">option</option>
+									<option value="4">option</option>
+								</select>
+								<div class="row-box">
+									<div class="row-box-items">
+										<input type="text" class="input" value="10k" />
+										<input type="text" class="input" value="50k" />
+										<input type="text" class="input" value="100k" />
+										<input type="text" class="input" value="250k" />
+									</div>
+									<div class="row-box-checkbox">
+										<div class="checkbox">
+											<input name="size-presets" type="checkbox" class="checkbox__input" id="size-presets-checkbox-1" checked />
+											<label for="size-presets-checkbox-1" class="checkbox__label">
+												Notional
+											</label>
+										</div>
+										<div class="checkbox">
+											<input name="size-presets" type="checkbox" class="checkbox__input" id="size-presets-checkbox-2" />
+											<label for="size-presets-checkbox-2" class="checkbox__label">
+												QTY
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Leverage</h3>
+								<p>
+									This slider enables you to adjust the leverage for each
+									instrument within an account. Should you choose a leverage
+									higher than what your exchange permits for a certain
+									instrument, it will automatically adjust to the highest
+									allowable leverage.
+								</p>
+								<div class="row-box">
+									<div class="row-box-range">
+										<div class="item-range-project">
+											<div class="range-slider range-slider--dotted">
+												<div class="item-range-value x-symbol">
+													0
+												</div>
+												<input class="range-slider__input js-dotted-range-slider" id="leverage-input" type="range" value="0" min="0" max="100" />
+												<div class="dots-slider">
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+												</div>
+											</div>
+										</div>
+										<span class="leverage__volume" id="leverage__volume">0</span>
+									</div>
+									<div class="row-box-checkbox">
+										<div class="checkbox">
+											<input name="leverage-checkbox" type="checkbox" class="checkbox__input" id="leverage-checkbox-1" checked />
+											<label for="leverage-checkbox-1" class="checkbox__label">
+												Isolated
+											</label>
+										</div>
+										<div class="checkbox">
+											<input name="leverage-checkbox" type="checkbox" class="checkbox__input" id="leverage-checkbox-2" />
+											<label for="leverage-checkbox-2" class="checkbox__label">
+												Cross
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Max slippage</h3>
+								<p>
+									When entering a news trade, this feature will protect you
+									from unwanted losses on illiquid pairs.
+								</p>
+								<div class="row-box">
+									<div class="row-box-range">
+										<div class="item-range-project">
+											<div class="range-slider range-slider--dotted">
+												<div class="item-range-value p-symbol">
+													0
+												</div>
+												<input class="range-slider__input js-dotted-range-slider" id="slippage-input" type="range" value="0" min="0" max="100" />
+												<div class="dots-slider">
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+													<span class="dott"></span>
+												</div>
+											</div>
+										</div>
+										<span class="slippage__volume" id="slippage__volume">0</span>
+									</div>
+									<div class="row-box-checkbox">
+										<div class="checkbox">
+											<input name="slippage-checkbox" type="checkbox" class="checkbox__input" id="slippage-checkbox-1" checked />
+											<label for="slippage-checkbox-1" class="checkbox__label">
+												ON
+											</label>
+										</div>
+										<div class="checkbox">
+											<input name="slippage-checkbox" type="checkbox" class="checkbox__input" id="slippage-checkbox-2" />
+											<label for="slippage-checkbox-2" class="checkbox__label">
+												OFF
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Keywords</h3>
+								<p>
+									News with these words will not be displayed in the news
+									feed.
+								</p>
+								<div class="row-box">
+									<form>
+										<input type="text" class="input" placeholder="Enter word (press enter)" />
+										<button type="button" type="submit" class="btn btn-secondary">
+											Add
+										</button>
+									</form>
+								</div>
+								<div class="line-word">
+									<span>This</span>
+									<div class="line-btns">
+										<div class="checkbox">
+											<input type="checkbox" class="checkbox__input" id="keywords-checkbox-1" checked />
+											<label for="keywords-checkbox-1" class="checkbox__label">
+												Active
+											</label>
+										</div>
+										<div class="item-delete">
+											<div class="delete"></div>
+											<span>Delete</span>
+										</div>
+									</div>
+								</div>
+								<div class="line-word">
+									<span>Is</span>
+									<div class="line-btns">
+										<div class="checkbox">
+											<input type="checkbox" class="checkbox__input" id="keywords-checkbox-2" checked />
+											<label for="keywords-checkbox-2" class="checkbox__label">
+												Active
+											</label>
+										</div>
+										<div class="item-delete">
+											<div class="delete"></div>
+											<span>Delete</span>
+										</div>
+									</div>
+								</div>
+								<div class="line-word">
+									<span>A</span>
+									<div class="line-btns">
+										<div class="checkbox">
+											<input type="checkbox" class="checkbox__input" id="keywords-checkbox-3" checked />
+											<label for="keywords-checkbox-3" class="checkbox__label">
+												Active
+											</label>
+										</div>
+										<div class="item-delete">
+											<div class="delete"></div>
+											<span>Delete</span>
+										</div>
+									</div>
+								</div>
+								<div class="line-word">
+									<span>Word</span>
+									<div class="line-btns">
+										<div class="checkbox">
+											<input type="checkbox" class="checkbox__input" id="keywords-checkbox-4" checked />
+											<label for="keywords-checkbox-4" class="checkbox__label">
+												Active
+											</label>
+										</div>
+										<div class="item-delete">
+											<div class="delete"></div>
+											<span>Delete</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Old news detector</h3>
+								<p>
+									This will display a warning icon to warn you when possible
+									old news has been re-used.
+								</p>
+								<div class="line-btns">
+									<div class="checkbox">
+										<input name="detector-checkbox" type="checkbox" class="checkbox__input" id="detector-checkbox-1" checked />
+										<label for="detector-checkbox-1" class="checkbox__label">
+											ON
+										</label>
+									</div>
+									<div class="checkbox">
+										<input name="detector-checkbox" type="checkbox" class="checkbox__input" id="detector-checkbox-2" />
+										<label for="detector-checkbox-2" class="checkbox__label">
+											OFF
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Same news</h3>
+								<p>
+									Enable or disable the same news published by different news
+									sources.
+								</p>
+								<div class="line-btns">
+									<div class="checkbox">
+										<input name="same-news" type="checkbox" class="checkbox__input" id="same-news-checkbox-1" checked />
+										<label for="same-news-checkbox-1" class="checkbox__label">
+											ON
+										</label>
+									</div>
+									<div class="checkbox">
+										<input name="same-news" type="checkbox" class="checkbox__input" id="same-news-checkbox-2" />
+										<label for="same-news-checkbox-2" class="checkbox__label">
+											OFF
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Hide/Show portfolio</h3>
+								<p>
+									Turn the liquidation price and all $-values off/on
+									everywhere on the platform.
+								</p>
+								<div class="line-btns">
+									<div class="checkbox">
+										<input name="hide-show" type="checkbox" class="checkbox__input" id="hide-show-checkbox-1" checked />
+										<label for="hide-show-checkbox-1" class="checkbox__label">
+											ON
+										</label>
+									</div>
+									<div class="checkbox">
+										<input name="hide-show" type="checkbox" class="checkbox__input" id="hide-show-checkbox-2" />
+										<label for="hide-show-checkbox-2" class="checkbox__label">
+											OFF
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="preferences-box">
+								<h3>Custom Buttons</h3>
+								<p>Select a coin, then customize the buttons</p>
+								<select data-show-selected name="form[]" data-class-modif="form">
+									<option value="XRP" selected>XRP</option>
+									<option value="2">option</option>
+									<option value="3">option</option>
+									<option value="4">option</option>
+								</select>
+							</div>
+							<div class="preferences-box">
+								<form>
+									<div class="enter-name">
+										<input type="text" class="input" value="Enter Name" placeholder="Enter Name" />
+									</div>
+									<input type="text" placeholder="$5,000" class="input" />
+									<div class="enter-name bg-red">
+										<input type="text" class="input" value="Enter Name" placeholder="Enter Name" />
+									</div>
+									<input type="text" placeholder="$5,000" class="input" />
+									<button type="button" class="btn btn-secondary">
+										Save
+									</button>
+								</form>
+								<div class="box-lines">
+									<div class="buy-sell-line">
+										<span>DOGE</span>
+										<p>Buy: Name of button (10,000$)</p>
+										<p>Sell: Name of button (8,000$)</p>
+										<div class="line-btns">
+											<div class="checkbox">
+												<input type="checkbox" class="checkbox__input" id="buy-sell-checkbox-1" checked />
+												<label for="buy-sell-checkbox-1" class="checkbox__label">
+													Active
+												</label>
+											</div>
+											<div class="item-delete">
+												<div class="delete"></div>
+												<span>Delete</span>
+											</div>
+										</div>
+									</div>
+									<div class="buy-sell-line">
+										<span>BTC</span>
+										<p>Buy: Name of button (78,000$)</p>
+										<p>Sell: Name of button (8,000$)</p>
+										<div class="line-btns">
+											<div class="checkbox">
+												<input type="checkbox" class="checkbox__input" id="buy-sell-checkbox-2" checked />
+												<label for="buy-sell-checkbox-2" class="checkbox__label">
+													Active
+												</label>
+											</div>
+											<div class="item-delete">
+												<div class="delete"></div>
+												<span>Delete</span>
+											</div>
+										</div>
+									</div>
+									<div class="buy-sell-line">
+										<span>CRV</span>
+										<p>Buy: Name of button (10,000$)</p>
+										<p>Sell: Name of button (8,000$)</p>
+										<div class="line-btns">
+											<div class="checkbox">
+												<input type="checkbox" class="checkbox__input" id="buy-sell-checkbox-3" checked />
+												<label for="buy-sell-checkbox-3" class="checkbox__label">
+													Active
+												</label>
+											</div>
+											<div class="item-delete">
+												<div class="delete"></div>
+												<span>Delete</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="js/app.min.js?_v=20240408224319"></script>
+</body>
+
+</html>

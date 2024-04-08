@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Key Binds</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap&_v=20240408224319" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/style.css?_v=20240408224319" />
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-settings">
+			<div class="d-flex">
+				<div class="header-info">
+					<div class="header-info__col">
+						<a href="#" class="header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture>
+						</a>
+						<a href="#" class="header__link">Terminal</a>
+					</div>
+					<div class="header-info__col">
+						<a href="#" class="btn btn-settings active"> Settings </a>
+						<a href="#" class="btn btn-nuke"> Nuke All </a>
+					</div>
+				</div>
+				<div class="header-btns">
+					<div class="header-info__col">
+						<div class="header-balance" id="header-balance"><span>$51,401.07</span></div>
+						<div class="header-time">12:32:57.301 AM (UTC)</div>
+					</div>
+					<div class="part-btns">
+						<span class="turned" id="turned">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+								<path d="M10 10L19 10M10 1L10 19M5.8 1H14.2C15.8802 1 16.7202 1 17.362 1.32698C17.9265 1.6146 18.3854 2.07354 18.673 2.63803C19 3.27976 19 4.11984 19 5.8V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V5.8C1 4.11984 1 3.27976 1.32698 2.63803C1.6146 2.07354 2.07354 1.6146 2.63803 1.32698C3.27976 1 4.11984 1 5.8 1Z" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="sound" id="turned-sound">
+						</span>
+						<span class="mode" id="turned-mode"></span>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<path d="M12.5556 13.4444L17 9M17 9L12.5556 4.55556M17 9H6.33333M6.33333 1H5.26667C3.77319 1 3.02646 1 2.45603 1.29065C1.95426 1.54631 1.54631 1.95426 1.29065 2.45603C1 3.02646 1 3.77319 1 5.26667V12.7333C1 14.2268 1 14.9735 1.29065 15.544C1.54631 16.0457 1.95426 16.4537 2.45603 16.7094C3.02646 17 3.77319 17 5.26667 17H6.33333" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="settings-page">
+				<div class="sidebar">
+					<ul>
+						<li>
+							<a class="api-management" href="api-management.html">API Management</a>
+						</li>
+						<li>
+							<a class="active key-binds" href="key-binds.html">Key Binds</a>
+						</li>
+						<li>
+							<a class="trading-preferences" href="trading-preferences.html">Trading Preferences</a>
+						</li>
+						<li>
+							<a class="sound-preferences" href="sound-preferences.html">Sound Preferences</a>
+						</li>
+						<li>
+							<a class="nav-sources" href="sources.html">Sources</a>
+						</li>
+						<li>
+							<a class="auto-trade" href="auto-trade.html">Auto Trade</a>
+						</li>
+						<li>
+							<a class="nav-subscription" href="subscription.html">Subscription</a>
+						</li>
+					</ul>
+				</div>
+				<div class="settings-content">
+					<div class="settings-header">
+						<h2 class="settings-header__title">Key Binds</h2>
+						<p class="settings-header__text">Change your key binds for a better trading experience.</p>
+					</div>
+					<div class="settings-inner">
+						<div class="key-binds-content" id="key-binds-content">
+							<div class="row">
+								<h2>General</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Open settings</span>
+												<input type="text" class="input" placeholder="Open settings" value="Open settings" />
+												<button type="submit" class="btn">
+													<span>7</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Toggle privacy mode</span>
+												<input type="text" class="input" placeholder="Toggle privacy mode" />
+												<button type="submit" class="btn">
+													<span>2</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Toggle Sound</span>
+												<input type="text" class="input" placeholder="Toggle Sound" />
+												<button type="submit" class="btn">
+													<span>Space</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>Chart</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Change chart timeframe</span>
+												<input type="text" class="input" placeholder="Change chart timeframe" />
+												<button type="submit" class="btn">
+													<span>F</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Toggle preview trade chart lines</span>
+												<input type="text" class="input" placeholder="Toggle preview trade chart lines" />
+												<button type="submit" class="btn">
+													<span>6</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>Tickers</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Focus search tickers</span>
+												<input type="text" class="input" placeholder="Focus search tickers" />
+												<button type="submit" class="btn">
+													<span>7</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Toggle symbol from favorites</span>
+												<input type="text" class="input" placeholder="Toggle symbol from favorites" />
+												<button type="submit" class="btn">
+													<span>T</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>Positions</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select next position</span>
+												<input type="text" class="input" placeholder="Select next position" />
+												<button type="submit" class="btn">
+													<span>1</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select previous position</span>
+												<input type="text" class="input" placeholder="Select previous position" />
+												<button type="submit" class="btn">
+													<span>Q</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>Trade</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select scale by risk trade</span>
+												<input type="text" class="input" placeholder="Select scale by risk trade" />
+												<button type="submit" class="btn">
+													<span>G</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select scale by size trade</span>
+												<input type="text" class="input" placeholder="Select scale by size trade" />
+												<button type="submit" class="btn">
+													<span>F4</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select all in one trade</span>
+												<input type="text" class="input" placeholder="Select all in one trade" />
+												<button type="submit" class="btn">
+													<span>Ctrl</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select simple orders</span>
+												<input type="text" class="input" placeholder="Select simple orders" />
+												<button type="submit" class="btn">
+													<span>F6</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select TWAP orders</span>
+												<input type="text" class="input" placeholder="Select TWAP orders" />
+												<button type="submit" class="btn">
+													<span>V</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select chase orders</span>
+												<input type="text" class="input" placeholder="Select chase orders" />
+												<button type="submit" class="btn">
+													<span>Q</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>News</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select first news</span>
+												<input type="text" class="input" placeholder="Select first news" />
+												<button type="submit" class="btn">
+													<span>7</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select next news</span>
+												<input type="text" class="input" placeholder="Select next news" />
+												<button type="submit" class="btn">
+													<span>B</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Select previous news</span>
+												<input type="text" class="input" placeholder="Select previous news" />
+												<button type="submit" class="btn">
+													<span>;</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<h2>News Buttons</h2>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Buy news</span>
+												<input type="text" class="input" placeholder="Buy news" />
+												<button type="submit" class="btn">
+													<span>Shift</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Sell news</span>
+												<input type="text" class="input" placeholder="Sell news" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Buy news (button 1)</span>
+												<input type="text" class="input" placeholder="Buy news (button 1)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Buy news (button 2)</span>
+												<input type="text" class="input" placeholder="Buy news (button 2)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Buy news (button 3)</span>
+												<input type="text" class="input" placeholder="Buy news (button 3)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Sell news (button 1)</span>
+												<input type="text" class="input" placeholder="Sell news (button 1)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Sell news (button 2)</span>
+												<input type="text" class="input" placeholder="Sell news (button 2)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+									<div class="key-bind-item">
+										<form>
+											<div class="input-item">
+												<span class="input-span">Sell news (button 3)</span>
+												<input type="text" class="input" placeholder="Sell news (button 3)" />
+												<button type="submit" class="btn">
+													<span>0</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="js/app.min.js?_v=20240408224319"></script>
+</body>
+
+</html>

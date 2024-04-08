@@ -1,0 +1,2751 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Terminal</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap&_v=20240408224319" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240408224319" />
+	<link rel="stylesheet" href="css/style.css?_v=20240408224319" />
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-no-logged">
+			<div class="d-flex">
+				<div class="header-info">
+					<div class="header-info__col">
+						<a href="#" class="header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture>
+						</a>
+						<a href="#" class="header__link">Terminal</a>
+					</div>
+					<div class="header-info__col">
+						<a href="#" class="btn btn-settings"> Settings </a>
+						<a href="#" class="btn btn-nuke"> Nuke All </a>
+					</div>
+				</div>
+				<div class="header-btns">
+					<div class="header-info__col">
+						<div class="header-balance" id="header-balance"><span>$51,401.07</span></div>
+						<div class="header-time">12:32:57.301 AM (UTC)</div>
+					</div>
+					<div class="part-btns">
+						<span class="turned" id="turned">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+								<path d="M10 10L19 10M10 1L10 19M5.8 1H14.2C15.8802 1 16.7202 1 17.362 1.32698C17.9265 1.6146 18.3854 2.07354 18.673 2.63803C19 3.27976 19 4.11984 19 5.8V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V5.8C1 4.11984 1 3.27976 1.32698 2.63803C1.6146 2.07354 2.07354 1.6146 2.63803 1.32698C3.27976 1 4.11984 1 5.8 1Z" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						<span class="sound" id="turned-sound">
+						</span>
+						<span class="mode" id="turned-mode"></span>
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<path d="M12.5556 13.4444L17 9M17 9L12.5556 4.55556M17 9H6.33333M6.33333 1H5.26667C3.77319 1 3.02646 1 2.45603 1.29065C1.95426 1.54631 1.54631 1.95426 1.29065 2.45603C1 3.02646 1 3.77319 1 5.26667V12.7333C1 14.2268 1 14.9735 1.29065 15.544C1.54631 16.0457 1.95426 16.4537 2.45603 16.7094C3.02646 17 3.77319 17 5.26667 17H6.33333" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="header-logged-btns">
+					<button type="button" class="btn btn-link" data-popup="#popup-login">Log In</button>
+					<button type="button" class="btn btn-primary" data-popup="#popup-register">Register</button>
+				</div>
+			</div>
+		</header>
+		<main class="page" id="grid-terminal">
+			<div class="grid">
+				<!--News-->
+				<div class="flex">
+					<div class="grid-item item-news-feed">
+						<div class="grid-stack-item-content">
+							<div class="top-head">
+								<h2>News Feed</h2>
+								<div class="btn-new-window" id="btn-news-tab">
+									<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+										<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+							</div>
+							<div class="item-news-inner" id="item-news-feed">
+								<div class="no-logged">
+									<div class="no-logge-content">
+										<p>Log in or register an account to start trading</p>
+										<div class="btns-no-logged">
+											<button class="btn btn-secondary" data-popup="#popup-login">
+												Log In
+											</button>
+											<button class="btn btn-primary" data-popup="#popup-register">
+												Register
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="news-search">
+									<input type="search" class="input" placeholder="Search News" />
+								</div>
+								<div class="news-box">
+									<!--Item News-->
+									<div class="item-box">
+										<div class="item-box-title">
+											<div class="title">
+												<div class="top">
+													<h2 class="author">Elon Musk</h2>
+													<p class="time">2 seconds ago</p>
+													<div class="like-dislike">
+														<div class="like">
+															<div class="like-icon">👍</div>
+															<div class="like-count">
+																<span>100</span>
+															</div>
+														</div>
+														<div class="dislike">
+															<div class="dislike-icon">👎</div>
+															<div class="like-count">
+																<span>100</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="desc">
+													Dogecoin might be my fav cryptocurrency. It’s pretty
+													cool.
+												</p>
+												<div class="bottom">
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M5.38461 10L10 5.5M10 5.5L5.38461 1M10 5.5L1 5.5" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M1 5.38461L5.5 10M5.5 10L10 5.38461M5.5 10L5.5 1" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+												</div>
+											</div>
+											<div class="img">
+												<picture><source srcset="img/nowx.webp" type="image/webp"><img src="img/nowx.png" alt="Arcane" /></picture>
+												<div class="copy-share">
+													<div class="share">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M6.38252 9.44272L5.61748 10.2078C4.56116 11.2641 2.84855 11.2641 1.79223 10.2078C0.735922 9.15146 0.735922 7.43884 1.79223 6.38252L2.55728 5.61748M9.44272 6.38252L10.2078 5.61748C11.2641 4.56116 11.2641 2.84855 10.2078 1.79223C9.15145 0.735922 7.43884 0.735922 6.38252 1.79223L5.61748 2.55728M4.1066 7.89339L7.8934 4.10659" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+													<div class="copy">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M3.5 1H7.44444C8.68901 1 9.31129 1 9.78665 1.24221C10.2048 1.45526 10.5447 1.79522 10.7578 2.21335C11 2.68871 11 3.31099 11 4.55556V8.5M2.77778 11H7.27778C7.90006 11 8.2112 11 8.44888 10.8789C8.65795 10.7724 8.82793 10.6024 8.93445 10.3933C9.05556 10.1556 9.05556 9.8445 9.05556 9.22222V4.72222C9.05556 4.09994 9.05556 3.7888 8.93445 3.55112C8.82793 3.34205 8.65795 3.17207 8.44888 3.06555C8.2112 2.94444 7.90006 2.94444 7.27778 2.94444H2.77778C2.1555 2.94444 1.84436 2.94444 1.60668 3.06555C1.39761 3.17207 1.22763 3.34205 1.1211 3.55112C1 3.7888 1 4.09994 1 4.72222V9.22222C1 9.8445 1 10.1556 1.1211 10.3933C1.22763 10.6024 1.39761 10.7724 1.60668 10.8789C1.84436 11 2.1555 11 2.77778 11Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="item-box-img">
+											<picture><source srcset="img/tweet-img.webp" type="image/webp"><img src="img/tweet-img.png" alt="Arcane" /></picture>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="BTC" /></picture>
+														<p>DOGE <span>+2.53%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$0.0758</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+														<p>BTC<span>+1.15%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$43,119.09</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--Item News-->
+									<div class="item-box">
+										<div class="item-box-title">
+											<div class="title">
+												<div class="top">
+													<h2 class="author">KuCoin</h2>
+													<p class="time">1 minute ago</p>
+													<div class="like-dislike">
+														<div class="like">
+															<div class="like-icon">👍</div>
+															<div class="like-count">
+																<span>+4</span>
+															</div>
+														</div>
+														<div class="dislike">
+															<div class="dislike-icon">👎</div>
+															<div class="like-count">
+																<span>-77</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="desc">
+													We are pleased to announce that $DMAIL has been
+													added to #KuCoin Convert!
+												</p>
+												<div class="bottom">
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M5.38461 10L10 5.5M10 5.5L5.38461 1M10 5.5L1 5.5" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M1 5.38461L5.5 10M5.5 10L10 5.38461M5.5 10L5.5 1" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+												</div>
+											</div>
+											<div class="img">
+												<picture><source srcset="img/kuCoin.webp" type="image/webp"><img src="img/kuCoin.png" alt="Arcane" /></picture>
+												<div class="copy-share">
+													<div class="share">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M6.38252 9.44272L5.61748 10.2078C4.56116 11.2641 2.84855 11.2641 1.79223 10.2078C0.735922 9.15146 0.735922 7.43884 1.79223 6.38252L2.55728 5.61748M9.44272 6.38252L10.2078 5.61748C11.2641 4.56116 11.2641 2.84855 10.2078 1.79223C9.15145 0.735922 7.43884 0.735922 6.38252 1.79223L5.61748 2.55728M4.1066 7.89339L7.8934 4.10659" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+													<div class="copy">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M3.5 1H7.44444C8.68901 1 9.31129 1 9.78665 1.24221C10.2048 1.45526 10.5447 1.79522 10.7578 2.21335C11 2.68871 11 3.31099 11 4.55556V8.5M2.77778 11H7.27778C7.90006 11 8.2112 11 8.44888 10.8789C8.65795 10.7724 8.82793 10.6024 8.93445 10.3933C9.05556 10.1556 9.05556 9.8445 9.05556 9.22222V4.72222C9.05556 4.09994 9.05556 3.7888 8.93445 3.55112C8.82793 3.34205 8.65795 3.17207 8.44888 3.06555C8.2112 2.94444 7.90006 2.94444 7.27778 2.94444H2.77778C2.1555 2.94444 1.84436 2.94444 1.60668 3.06555C1.39761 3.17207 1.22763 3.34205 1.1211 3.55112C1 3.7888 1 4.09994 1 4.72222V9.22222C1 9.8445 1 10.1556 1.1211 10.3933C1.22763 10.6024 1.39761 10.7724 1.60668 10.8789C1.84436 11 2.1555 11 2.77778 11Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="BTC" /></picture>
+														<p>DMAIL<span>+5.16%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$4.29</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--Item News-->
+									<div class="item-box">
+										<div class="item-box-title">
+											<div class="title">
+												<div class="top">
+													<h2 class="author">KuCoin</h2>
+													<p class="time">1 minute ago</p>
+													<div class="like-dislike">
+														<div class="like">
+															<div class="like-icon">👍</div>
+															<div class="like-count">
+																<span>+4</span>
+															</div>
+														</div>
+														<div class="dislike">
+															<div class="dislike-icon">👎</div>
+															<div class="like-count">
+																<span>-77</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="desc">
+													We are pleased to announce that $DMAIL has been
+													added to #KuCoin Convert!
+												</p>
+												<div class="bottom">
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M5.38461 10L10 5.5M10 5.5L5.38461 1M10 5.5L1 5.5" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M1 5.38461L5.5 10M5.5 10L10 5.38461M5.5 10L5.5 1" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+												</div>
+											</div>
+											<div class="img">
+												<picture><source srcset="img/kuCoin.webp" type="image/webp"><img src="img/kuCoin.png" alt="Arcane" /></picture>
+												<div class="copy-share">
+													<div class="share">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M6.38252 9.44272L5.61748 10.2078C4.56116 11.2641 2.84855 11.2641 1.79223 10.2078C0.735922 9.15146 0.735922 7.43884 1.79223 6.38252L2.55728 5.61748M9.44272 6.38252L10.2078 5.61748C11.2641 4.56116 11.2641 2.84855 10.2078 1.79223C9.15145 0.735922 7.43884 0.735922 6.38252 1.79223L5.61748 2.55728M4.1066 7.89339L7.8934 4.10659" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+													<div class="copy">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M3.5 1H7.44444C8.68901 1 9.31129 1 9.78665 1.24221C10.2048 1.45526 10.5447 1.79522 10.7578 2.21335C11 2.68871 11 3.31099 11 4.55556V8.5M2.77778 11H7.27778C7.90006 11 8.2112 11 8.44888 10.8789C8.65795 10.7724 8.82793 10.6024 8.93445 10.3933C9.05556 10.1556 9.05556 9.8445 9.05556 9.22222V4.72222C9.05556 4.09994 9.05556 3.7888 8.93445 3.55112C8.82793 3.34205 8.65795 3.17207 8.44888 3.06555C8.2112 2.94444 7.90006 2.94444 7.27778 2.94444H2.77778C2.1555 2.94444 1.84436 2.94444 1.60668 3.06555C1.39761 3.17207 1.22763 3.34205 1.1211 3.55112C1 3.7888 1 4.09994 1 4.72222V9.22222C1 9.8445 1 10.1556 1.1211 10.3933C1.22763 10.6024 1.39761 10.7724 1.60668 10.8789C1.84436 11 2.1555 11 2.77778 11Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/item-7.webp" type="image/webp"><img src="img/item-7.png" alt="BTC" /></picture>
+														<p>DOGE <span>+2.53%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$0.0758</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/item-7.webp" type="image/webp"><img src="img/item-7.png" alt="BTC" /></picture>
+														<p>BTC<span>+1.15%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$43,119.09</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--Item News-->
+									<div class="item-box">
+										<div class="item-box-title">
+											<div class="title">
+												<div class="top">
+													<h2 class="author">Elon Musk</h2>
+													<p class="time">2 seconds ago</p>
+													<div class="like-dislike">
+														<div class="like">
+															<div class="like-icon">👍</div>
+															<div class="like-count">
+																<span>100</span>
+															</div>
+														</div>
+														<div class="dislike">
+															<div class="dislike-icon">👎</div>
+															<div class="like-count">
+																<span>100</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="desc">
+													Dogecoin might be my fav cryptocurrency. It’s pretty
+													cool.
+												</p>
+												<div class="bottom">
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M5.38461 10L10 5.5M10 5.5L5.38461 1M10 5.5L1 5.5" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M1 5.38461L5.5 10M5.5 10L10 5.38461M5.5 10L5.5 1" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+												</div>
+											</div>
+											<div class="img">
+												<picture><source srcset="img/nowx.webp" type="image/webp"><img src="img/nowx.png" alt="Arcane" /></picture>
+												<div class="copy-share">
+													<div class="share">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M6.38252 9.44272L5.61748 10.2078C4.56116 11.2641 2.84855 11.2641 1.79223 10.2078C0.735922 9.15146 0.735922 7.43884 1.79223 6.38252L2.55728 5.61748M9.44272 6.38252L10.2078 5.61748C11.2641 4.56116 11.2641 2.84855 10.2078 1.79223C9.15145 0.735922 7.43884 0.735922 6.38252 1.79223L5.61748 2.55728M4.1066 7.89339L7.8934 4.10659" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+													<div class="copy">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M3.5 1H7.44444C8.68901 1 9.31129 1 9.78665 1.24221C10.2048 1.45526 10.5447 1.79522 10.7578 2.21335C11 2.68871 11 3.31099 11 4.55556V8.5M2.77778 11H7.27778C7.90006 11 8.2112 11 8.44888 10.8789C8.65795 10.7724 8.82793 10.6024 8.93445 10.3933C9.05556 10.1556 9.05556 9.8445 9.05556 9.22222V4.72222C9.05556 4.09994 9.05556 3.7888 8.93445 3.55112C8.82793 3.34205 8.65795 3.17207 8.44888 3.06555C8.2112 2.94444 7.90006 2.94444 7.27778 2.94444H2.77778C2.1555 2.94444 1.84436 2.94444 1.60668 3.06555C1.39761 3.17207 1.22763 3.34205 1.1211 3.55112C1 3.7888 1 4.09994 1 4.72222V9.22222C1 9.8445 1 10.1556 1.1211 10.3933C1.22763 10.6024 1.39761 10.7724 1.60668 10.8789C1.84436 11 2.1555 11 2.77778 11Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="item-box-img">
+											<picture><source srcset="img/tweet-img.webp" type="image/webp"><img src="img/tweet-img.png" alt="Arcane" /></picture>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="BTC" /></picture>
+														<p>DOGE <span>+2.53%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$0.0758</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+														<p>BTC<span>+1.15%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$43,119.09</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--Item News-->
+									<div class="item-box">
+										<div class="item-box-title">
+											<div class="title">
+												<div class="top">
+													<h2 class="author">KuCoin</h2>
+													<p class="time">1 minute ago</p>
+													<div class="like-dislike">
+														<div class="like">
+															<div class="like-icon">👍</div>
+															<div class="like-count">
+																<span>+4</span>
+															</div>
+														</div>
+														<div class="dislike">
+															<div class="dislike-icon">👎</div>
+															<div class="like-count">
+																<span>-77</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="desc">
+													We are pleased to announce that $DMAIL has been
+													added to #KuCoin Convert!
+												</p>
+												<div class="bottom">
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M5.38461 10L10 5.5M10 5.5L5.38461 1M10 5.5L1 5.5" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+													<div class="item">
+														<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+															<path d="M1 5.38461L5.5 10M5.5 10L10 5.38461M5.5 10L5.5 1" stroke="#7B7B7B" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+														<p>02:15:03.628 AM</p>
+													</div>
+												</div>
+											</div>
+											<div class="img">
+												<picture><source srcset="img/kuCoin.webp" type="image/webp"><img src="img/kuCoin.png" alt="Arcane" /></picture>
+												<div class="copy-share">
+													<div class="share">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M6.38252 9.44272L5.61748 10.2078C4.56116 11.2641 2.84855 11.2641 1.79223 10.2078C0.735922 9.15146 0.735922 7.43884 1.79223 6.38252L2.55728 5.61748M9.44272 6.38252L10.2078 5.61748C11.2641 4.56116 11.2641 2.84855 10.2078 1.79223C9.15145 0.735922 7.43884 0.735922 6.38252 1.79223L5.61748 2.55728M4.1066 7.89339L7.8934 4.10659" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+													<div class="copy">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+															<path d="M3.5 1H7.44444C8.68901 1 9.31129 1 9.78665 1.24221C10.2048 1.45526 10.5447 1.79522 10.7578 2.21335C11 2.68871 11 3.31099 11 4.55556V8.5M2.77778 11H7.27778C7.90006 11 8.2112 11 8.44888 10.8789C8.65795 10.7724 8.82793 10.6024 8.93445 10.3933C9.05556 10.1556 9.05556 9.8445 9.05556 9.22222V4.72222C9.05556 4.09994 9.05556 3.7888 8.93445 3.55112C8.82793 3.34205 8.65795 3.17207 8.44888 3.06555C8.2112 2.94444 7.90006 2.94444 7.27778 2.94444H2.77778C2.1555 2.94444 1.84436 2.94444 1.60668 3.06555C1.39761 3.17207 1.22763 3.34205 1.1211 3.55112C1 3.7888 1 4.09994 1 4.72222V9.22222C1 9.8445 1 10.1556 1.1211 10.3933C1.22763 10.6024 1.39761 10.7724 1.60668 10.8789C1.84436 11 2.1555 11 2.77778 11Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="box-status">
+											<div class="box-status-top">
+												<div class="item">
+													<div class="item-info">
+														<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="BTC" /></picture>
+														<p>DMAIL<span>+5.16%</span></p>
+													</div>
+													<div class="item-number">
+														<p>$4.29</p>
+													</div>
+												</div>
+												<div class="icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+														<path d="M1 6V13M5.66667 1V13M10.3333 6V13M15 1V13" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="box-status-bottom">
+												<div class="green">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+												<div class="red">
+													<button type="button" class="btn">10K$</button>
+													<button type="button" class="btn">50K$</button>
+													<button type="button" class="btn">250K$</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full">
+						<!--BTCUSDT-->
+						<div class="grid-item BTCUSDT-item">
+							<div class="grid-stack-item-content BTCUSDT-item-inner" id="BTCUSDT-item">
+								<div class="box">
+									<h2>BTCUSDT</h2>
+								</div>
+								<div class="box">
+									<p>Mark price: <strong>$42,571.49</strong></p>
+								</div>
+								<div class="box">
+									<p>Index price: <strong>$42,572.00</strong></p>
+								</div>
+								<div class="box">
+									<p>Liquidity: <strong>$521,583.32</strong></p>
+								</div>
+								<div class="box">
+									<p>Open interest: <strong>$521,583.32</strong></p>
+								</div>
+							</div>
+							<div class="btn-new-window" id="BTCUSDT-item-btn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+									<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="flex flex-column">
+							<div class="w-full complete-full">
+								<div class="flex">
+									<!--Chart Tradeviews-->
+									<div class="grid-item BTCUSDT-chart">
+										<div class="grid-stack-item-content">
+											<div class="top-head">
+												<h2><strong>Chart</strong></h2>
+												<div class="btn-new-window" id="chart-btn-new">
+													<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+														<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+											</div>
+											<div class="chart-content" id="chart-content-tab"></div>
+										</div>
+									</div>
+									<!--Order Book-->
+									<div class="grid-item order-book-item" data-item-id="3">
+										<div class="grid-stack-item-content">
+											<div class="btn-new-window" id="order-book-btn">
+												<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+													<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+											<div id="order-book-tab">
+												<div class="top-head">
+													<h2><strong>Order book</strong></h2>
+													<div class="dropdown">
+														<button class="dropdown__button" type="button">
+															$0.1
+														</button>
+														<ul class="dropdown__list">
+															<li class="dropdown__list-item dropdown__list-item_active" data-value="0.1">
+																$0.1
+															</li>
+															<li class="dropdown__list-item" data-value="0.2">
+																$0.2
+															</li>
+															<li class="dropdown__list-item" data-value="0.3">
+																$0.3
+															</li>
+															<li class="dropdown__list-item" data-value="0.4">
+																$0.4
+															</li>
+														</ul>
+														<input class="dropdown__input_hidden" type="text" name="select-category" value="" />
+													</div>
+													<br />
+												</div>
+												<div class="order-book-content">
+													<div class="order-book-title">
+														<h2>Price(USDT)</h2>
+														<h2>Amount(BTC)</h2>
+														<h2>Total</h2>
+													</div>
+													<div class="order-book-inner red">
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="87" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="78" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="64" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="68" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="78" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="76" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="78" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="64" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="70" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter red">
+																<span data-progress="60" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="total">41,473.01</div>
+													</div>
+													<div class="order-book-inner green">
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="45" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="55" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="55" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="25" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="100" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="60" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="58" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="55" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="85" style="width: 0"></span>
+															</div>
+														</div>
+														<div class="order-book-line">
+															<p>41,473.01</p>
+															<p>0.01535</p>
+															<p class="total-order-number">48.54</p>
+															<div class="meter green">
+																<span data-progress="85" style="width: 0"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--Position Order-->
+								<div class="grid-item position-item">
+									<div class="grid-stack-item-content">
+										<div class="btn-new-window" id="position-btn-tab">
+											<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+												<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</div>
+										<div data-tabs class="tabs" id="position-tab-content">
+											<!--Tab BTNS-->
+											<nav data-tabs-titles class="tabs__navigation">
+												<button type="button" class="tabs__title _tab-active">
+													Positions<span>(2)</span>
+												</button>
+												<button type="button" class="tabs__title">
+													Closed Positions
+												</button>
+												<button type="button" class="tabs__title">
+													Open Orders<span>(9)</span>
+												</button>
+												<div class="cancel-blocks">
+													<button type="button" class="cancel-bids">
+														Cancel Bids
+														<span>(1)</span>
+													</button>
+													<button type="button" class="cancel-asks">
+														Cancel Asks
+														<span>(8)</span>
+													</button>
+													<button type="button" class="cancel-all">
+														Cancel All Orders
+													</button>
+												</div>
+											</nav>
+											<!--Tab Content-->
+											<div data-tabs-body class="tabs__content">
+												<!--Tab Content 1-->
+												<div class="tabs__body">
+													<div class="no-logged">
+														<div class="no-logge-content">
+															<p>
+																Log in or register an account to start trading
+															</p>
+															<div class="btns-no-logged">
+																<button class="btn btn-secondary" data-popup="#popup-login">
+																	Log In
+																</button>
+																<button class="btn btn-primary" data-popup="#popup-register">
+																	Register
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="position-tab-content">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th class="first"></th>
+																	<th class="symbol">Symbol</th>
+																	<th class="nSize">nSize/pSize</th>
+																	<th class="entry">Entry/Liq</th>
+																	<th class="mark-price">Mark Price</th>
+																	<th class="uPnl">uPNL</th>
+																	<th></th>
+																	<th>
+																		<div class="market-limit">
+																			<button type="button" class="btn">
+																				Market
+																			</button>
+																			<button type="button" class="btn active">
+																				Limit
+																			</button>
+																		</div>
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$142,115.29</h2>
+																			<p>25.10</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$42,514.00</h2>
+																			<p>$35,185.39</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$3,777.52</h2>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$3,777.52</h3>
+																			<span>2.11% (24h)</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-enter-price">
+																			<div class="row">
+																				<label>Enter Price</label>
+																				<input type="text" class="input" placeholder="54,205" />
+																			</div>
+																			<div class="row-spans">
+																				<button type="button" class="btn">
+																					25%
+																				</button>
+																				<button type="button" class="btn">
+																					50%
+																				</button>
+																				<button type="button" class="btn">
+																					75%
+																				</button>
+																				<button type="button" class="btn">
+																					100%
+																				</button>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!--Tab Content Closed 2-->
+												<div class="tabs__body">
+													<div class="no-logged">
+														<div class="no-logge-content">
+															<p>
+																Log in or register an account to start trading
+															</p>
+															<div class="btns-no-logged">
+																<button class="btn btn-secondary" data-popup="#popup-login">
+																	Log In
+																</button>
+																<button class="btn btn-primary" data-popup="#popup-register">
+																	Register
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="closed-position-content">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th class="first"></th>
+																	<th class="symbol">Symbol</th>
+																	<th class="nSize">Time in trade</th>
+																	<th class="entry">Entry time</th>
+																	<th class="mark-price">Entry/Exit</th>
+																	<th class="uPnl">PNL</th>
+																	<th></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>1d, 3h, 53m, 11s</h2>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>05:25:11AM</h2>
+																			<p>12-15-2024</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$52,519.50</h2>
+																			<p>$58,491.44</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$628.19</h3>
+																			<span>53.25%</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position red">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>1d, 3h, 53m, 11s</h2>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>05:25:11AM</h2>
+																			<p>12-15-2024</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$52,519.50</h2>
+																			<p>$58,491.44</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$628.19</h3>
+																			<span>53.25%</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>1d, 3h, 53m, 11s</h2>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>05:25:11AM</h2>
+																			<p>12-15-2024</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$52,519.50</h2>
+																			<p>$58,491.44</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$628.19</h3>
+																			<span>53.25%</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="x-position red">5x</div>
+																	</td>
+																	<td>
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>1d, 3h, 53m, 11s</h2>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>05:25:11AM</h2>
+																			<p>12-15-2024</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h2>$52,519.50</h2>
+																			<p>$58,491.44</p>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="position-info-box">
+																			<h3>$628.19</h3>
+																			<span>53.25%</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="share-position" data-popup="#popup-share">
+																			<p>Share</p>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!--Tab Content Closed 3-->
+												<div class="tabs__body">
+													<div class="no-logged">
+														<div class="no-logge-content">
+															<p>
+																Log in or register an account to start trading
+															</p>
+															<div class="btns-no-logged">
+																<button class="btn btn-secondary" data-popup="#popup-login">
+																	Log In
+																</button>
+																<button class="btn btn-primary" data-popup="#popup-register">
+																	Register
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="open-position-content">
+														<div class="row">
+															<div class="all-btc-open">
+																<h3 class="title">All BTC open orders</h3>
+																<div class="content">
+																	<div class="item-title">
+																		<span>Symbol</span>
+																		<span>Side</span>
+																		<span>Price</span>
+																		<span>nSize</span>
+																		<span>Action</span>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/btc.webp" type="image/webp"><img src="img/btc.png" alt="BTC" /></picture>
+																			<span>BTC</span>
+																		</div>
+																		<div><span class="green">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="all-other-open">
+																<h3 class="title">All other open orders</h3>
+																<div class="content">
+																	<div class="item-title">
+																		<span>Symbol</span>
+																		<span>Side</span>
+																		<span>Price</span>
+																		<span>nSize</span>
+																		<span>Action</span>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="dmail" /></picture>
+																			<span>DMAIL</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="dmail" /></picture>
+																			<span>DMAIL</span>
+																		</div>
+																		<div><span class="green">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="dmail" /></picture>
+																			<span>DMAIL</span>
+																		</div>
+																		<div><span class="green">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="dmail" /></picture>
+																			<span>DMAIL</span>
+																		</div>
+																		<div><span class="green">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/dmail.webp" type="image/webp"><img src="img/dmail.png" alt="dmail" /></picture>
+																			<span>DMAIL</span>
+																		</div>
+																		<div><span class="green">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																	<div class="item">
+																		<div class="symbol-position">
+																			<picture><source srcset="img/doge.webp" type="image/webp"><img src="img/doge.png" alt="doge" /></picture>
+																			<span>DOGE</span>
+																		</div>
+																		<div><span class="red">Sell</span></div>
+																		<div>
+																			<h3>$42,514.00</h3>
+																		</div>
+																		<div>
+																			<h3>2.5831</h3>
+																		</div>
+																		<div>
+																			<button class="btn btn-cancel">
+																				Cancel Order
+																			</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="border-line"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="w-full part-complete">
+								<!--Panel Trade settings-->
+
+								<div class="grid-item trade-BTCUSDT-item">
+									<div class="grid-stack-item-content">
+										<div class="top-head">
+											<h2><strong>Trade</strong> BTCUSDT</h2>
+											<div class="btn-new-window" id="trade-btn-btc">
+												<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+													<path d="M12 4.66667L12 1.00001M12 1.00001H8.33332M12 1.00001L6.5 6.5M5.27778 1H3.93333C2.90657 1 2.39319 1 2.00102 1.19982C1.65605 1.37559 1.37559 1.65605 1.19982 2.00102C1 2.39319 1 2.90657 1 3.93333V9.06667C1 10.0934 1 10.6068 1.19982 10.999C1.37559 11.3439 1.65605 11.6244 2.00102 11.8002C2.39319 12 2.90657 12 3.93333 12H9.06667C10.0934 12 10.6068 12 10.999 11.8002C11.3439 11.6244 11.6244 11.3439 11.8002 10.999C12 10.6068 12 10.0934 12 9.06667V7.72222" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</div>
+										</div>
+										<div class="content content-trade" id="trade-BTCUSDT-item">
+											<div class="no-logged">
+												<div class="no-logge-content">
+													<p>
+														Log in or register an account to start trading
+													</p>
+													<div class="btns-no-logged">
+														<button class="btn btn-secondary" data-popup="#popup-login">
+															Log In
+														</button>
+														<button class="btn btn-primary" data-popup="#popup-register">
+															Register
+														</button>
+													</div>
+												</div>
+											</div>
+											<div data-tabs class="tabs">
+												<nav data-tabs-titles class="tabs__navigation">
+													<button type="button" class="tabs__title _tab-active">
+														Open
+													</button>
+													<button type="button" class="tabs__title">
+														Close
+													</button>
+												</nav>
+												<div class="row">
+													<div class="isolated-select" data-popup="#popup-isolated-cross">
+														<div class="select-box">
+															<div class="select-box__current" tabindex="2">
+																<div class="select-box__value">
+																	<input class="select-box__input" type="radio" id="00" value="01" name="isolated" checked="checked" />
+																	<p class="select-box__input-text">
+																		Isolated
+																	</p>
+																</div>
+																<div class="select-box__value">
+																	<input class="select-box__input" type="radio" id="01" value="02" name="cross" />
+																	<p class="select-box__input-text">Cross</p>
+																</div>
+																<div class="select-box__icon" aria-hidden="true"></div>
+															</div>
+															<ul class="select-box__list">
+																<li id="select-isolated">
+																	<label class="select-box__option" for="00" aria-hidden="aria-hidden">
+																		Isolated
+																	</label>
+																</li>
+																<li id="select-cross">
+																	<label class="select-box__option" for="01" aria-hidden="aria-hidden">
+																		Cross
+																	</label>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="select-box">
+														<div class="select-box__current" tabindex="1">
+															<div class="select-box__value">
+																<input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked" />
+																<p class="select-box__input-text">
+																	<span class="green">L 100.000x</span><span class="red">L 100.00x</span>
+																</p>
+															</div>
+															<div class="select-box__value">
+																<input class="select-box__input" type="radio" id="1" value="2" name="Ben" />
+																<p class="select-box__input-text">
+																	<span class="green">L 200.00x</span><span class="red">L 200.00x</span>
+																</p>
+															</div>
+															<div class="select-box__value">
+																<input class="select-box__input" type="radio" id="2" value="3" name="Ben" />
+																<p class="select-box__input-text">
+																	<span class="green">L 300.00x</span><span class="red">L 300.00x</span>
+																</p>
+															</div>
+															<div class="select-box__value">
+																<input class="select-box__input" type="radio" id="3" value="4" name="Ben" />
+																<p class="select-box__input-text">
+																	<span class="green">L 400.00x</span><span class="red">L 400.00x</span>
+																</p>
+															</div>
+															<div class="select-box__value">
+																<input class="select-box__input" type="radio" id="4" value="5" name="Ben" />
+																<p class="select-box__input-text">
+																	<span class="green">L 500.00x</span><span class="red">L 500.00x</span>
+																</p>
+															</div>
+															<div class="select-box__icon" aria-hidden="true"></div>
+														</div>
+														<ul class="select-box__list">
+															<li>
+																<label class="select-box__option" for="0" aria-hidden="aria-hidden">
+																	<span class="green">L 100.000x</span><span class="red">L 100.00x</span>
+																</label>
+															</li>
+															<li>
+																<label class="select-box__option" for="1" aria-hidden="aria-hidden">
+																	<span class="green">L 200.00x</span><span class="red">L 200.00x</span>
+																</label>
+															</li>
+															<li>
+																<label class="select-box__option" for="2" aria-hidden="aria-hidden">
+																	<span class="green">L 300.00x</span><span class="red">L 300.00x</span>
+																</label>
+															</li>
+															<li>
+																<label class="select-box__option" for="3" aria-hidden="aria-hidden">
+																	<span class="green">L 400.00x</span><span class="red">L 400.00x</span>
+																</label>
+															</li>
+															<li>
+																<label class="select-box__option" for="4" aria-hidden="aria-hidden">
+																	<span class="green">L 500.00x</span><span class="red">L 500.00x</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div data-tabs-body class="tabs__content">
+													<div class="tabs__body">
+														<div data-tabs class="tabs">
+															<nav data-tabs-titles class="tabs__navigation second-tabs">
+																<button type="button" class="tabs__title _tab-active">
+																	Limit
+																</button>
+																<button type="button" class="tabs__title">
+																	Market
+																</button>
+																<button type="button" class="tabs__title">
+																	<div class="selects-box">
+																		<div class="select-conditional" data-select>
+																			<div class="select__selected-item" data-select-action data-select-open>
+																				<div class="select__selected-title" data-select-title>
+																					Conditional
+																				</div>
+																				<svg class="select__arrow" data-select-arrow xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+																					<path d="M1 1L4.5 5L8 1" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round" />
+																				</svg>
+																			</div>
+																			<div class="select__list" data-select-list>
+																				<div class="select__list-item" id="open-tab-limit" data-select-action data-select-item>
+																					Chase Limit Orders
+																				</div>
+																				<div class="select__list-item" id="open-tab-twap" data-select-action data-select-item>
+																					TWAP
+																				</div>
+																				<div class="select__list-item" id="open-tab-scaled" data-select-action data-select-item>
+																					Scaled Order
+																				</div>
+																			</div>
+																			<input class="select__input" type="text" data-select-input />
+																		</div>
+																	</div>
+																</button>
+															</nav>
+															<div data-tabs-body class="tabs__content">
+																<!--Limit Content-->
+																<div class="tabs__body">
+																	<div class="result-input">
+																		<h3>Order Price</h3>
+																		<p>
+																			<span>45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="result-input">
+																		<h3>Quantity</h3>
+																		<p>
+																			<span id="limit-result">1.4582</span>
+																			<span>BTC</span>
+																		</p>
+																	</div>
+																	<div class="range-slider range-slider--dotted">
+																		<input class="range-slider__input js-dotted-range-slider" id="" type="range" value="2" min="0" max="100" />
+																	</div>
+																	<div class="row-checkbow">
+																		<span>TP/SL:</span>
+																		<div class="line-btns">
+																			<div class="checkbox">
+																				<input name="tp-sl-checkbox" type="checkbox" class="checkbox__input" id="tp-sl-checkbox-1" checked />
+																				<label for="tp-sl-checkbox-1" class="checkbox__label">
+																					Short
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input name="tp-sl-checkbox" type="checkbox" class="checkbox__input" id="tp-sl-checkbox-2" />
+																				<label for="tp-sl-checkbox-2" class="checkbox__label">
+																					Long
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="result-input">
+																		<h3>TP Price</h3>
+																		<p>
+																			<span id="limit-result">45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="result-input">
+																		<h3>TP Quantity</h3>
+																		<p>
+																			<span id="limit-result">1.4582</span>
+																			<span>BTC</span>
+																		</p>
+																	</div>
+																	<div class="btns-block">
+																		<button class="btn green">
+																			Buy / Long
+																		</button>
+																		<button class="btn red">
+																			Sell / Short
+																		</button>
+																	</div>
+																	<div class="total-price-row">
+																		<p>Cost: <span>3,575.49</span></p>
+																		<p>Cost: <span>3,575.49</span></p>
+																	</div>
+																</div>
+																<!--Market Content-->
+																<div class="tabs__body">
+																	<div class="result-input">
+																		<h3>Order Price</h3>
+																		<p>
+																			<span id="limit-result">45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="range-slider range-slider--dotted">
+																		<input class="range-slider__input js-dotted-range-slider" type="range" value="2" min="0" max="100" />
+																	</div>
+																	<div class="row-checkbow">
+																		<span>TP/SL:</span>
+																		<div class="line-btns">
+																			<div class="checkbox">
+																				<input name="market-tp-sl-checkbox" type="checkbox" class="checkbox__input" id="market-tp-sl-checkbox-1" checked />
+																				<label for="market-tp-sl-checkbox-1" class="checkbox__label">
+																					Short
+																				</label>
+																			</div>
+																			<div class="checkbox">
+																				<input name="market-tp-sl-checkbox" type="checkbox" class="checkbox__input" id="market-tp-sl-checkbox-2" />
+																				<label for="market-tp-sl-checkbox-2" class="checkbox__label">
+																					Long
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="result-input">
+																		<h3>TP Price</h3>
+																		<p>
+																			<span id="limit-result">45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="result-input">
+																		<h3>TP Quantity</h3>
+																		<p>
+																			<span id="limit-result">45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="btns-block">
+																		<button class="btn green">
+																			Buy / Long
+																		</button>
+																		<button class="btn red">
+																			Sell / Short
+																		</button>
+																	</div>
+																	<div class="total-price-row">
+																		<p>Cost: <span>3,575.49</span></p>
+																		<p>Cost: <span>3,575.49</span></p>
+																	</div>
+																</div>
+																<!--Conditional-->
+																<div class="output">
+																	<!--Limit Orders-->
+																	<div id="limitOrders" class="colors red active">
+																		<div class="result-input">
+																			<h3>Quantity</h3>
+																			<p>
+																				<span id="limit-result">4.00</span>
+																				<span>BTC</span>
+																			</p>
+																		</div>
+																		<div class="result-input">
+																			<div class="checkbox">
+																				<input name="max-chase-distance" type="checkbox" class="checkbox__input" id="max-chase-distance" checked />
+																				<label for="max-chase-distance" class="checkbox__label">
+																					Max. chase distance
+																				</label>
+																			</div>
+																			<p>
+																				<span id="limit-result">1,000</span>
+																				<span>USDT</span>
+																			</p>
+																		</div>
+																		<div class="range-slider range-slider--dotted">
+																			<input class="range-slider__input js-dotted-range-slider" id="" type="range" value="2" min="0" max="100" />
+																		</div>
+																		<div class="btns-block">
+																			<button class="btn green">
+																				Buy / Long
+																			</button>
+																			<button class="btn red">
+																				Sell / Short
+																			</button>
+																		</div>
+																	</div>
+																	<!--Twap-->
+																	<div id="TWAP">
+																		<div class="result-input">
+																			<h3>Quantity</h3>
+																			<p>
+																				<span id="limit-result">4.00</span>
+																				<span>BTC</span>
+																			</p>
+																		</div>
+																		<div class="range-slider range-slider--dotted">
+																			<input class="range-slider__input js-dotted-range-slider" id="" type="range" value="2" min="0" max="100" />
+																		</div>
+																		<div class="d-flex">
+																			<div class="result-input">
+																				<h3>Running time (5m-24h)</h3>
+																				<p>
+																					<span id="limit-result">4.00</span>
+																					<span>Hour(s)</span>
+																				</p>
+																			</div>
+																			<div class="result-input">
+																				<p>
+																					<span id="limit-result">4.00</span>
+																					<span>Minute(s)</span>
+																				</p>
+																			</div>
+																		</div>
+																		<div class="boxes-time">
+																			<p class="boxes-time-item _active">
+																				10 Min
+																			</p>
+																			<p class="boxes-time-item">30 Min</p>
+																			<p class="boxes-time-item">1H</p>
+																			<p class="boxes-time-item">4H</p>
+																			<p class="boxes-time-item">8H</p>
+																		</div>
+																		<div class="time-lines">
+																			<div class="time-line-item">
+																				<p>Frequency</p>
+																				<span>30S</span>
+																			</div>
+																			<div class="time-line-item">
+																				<p>Qty (Per Sub-Order)</p>
+																				<span>0.05</span>
+																			</div>
+																		</div>
+																		<div class="btns-block">
+																			<button class="btn green">
+																				Buy / Long
+																			</button>
+																			<button class="btn red">
+																				Sell / Short
+																			</button>
+																		</div>
+																		<div class="row-checkbow">
+																			<div class="line-btns">
+																				<div class="checkbox">
+																					<input name="random-order-checkbox" type="checkbox" class="checkbox__input" id="random-order-checkbox-1" checked />
+																					<label for="random-order-checkbox-1" class="checkbox__label">
+																						Random Order
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<!--ScaleOrder-->
+																	<div id="scaledOrder">
+																		<div class="result-input">
+																			<h3>Quantity</h3>
+																			<p>
+																				<span id="limit-result">4.00</span>
+																				<span>BTC</span>
+																			</p>
+																		</div>
+																		<div class="range-slider range-slider--dotted">
+																			<input class="range-slider__input js-dotted-range-slider" id="" type="range" value="2" min="0" max="100" />
+																		</div>
+																		<div class="d-flex">
+																			<div class="result-input">
+																				<h3>Price Range</h3>
+																				<p>
+																					<span id="limit-result">52,159.99</span>
+																				</p>
+																			</div>
+																			<div class="result-input">
+																				<p>
+																					<span id="limit-result">52,900.00</span>
+																				</p>
+																			</div>
+																		</div>
+																		<label class="label-number">Number of orders</label>
+																		<div class="boxes-time">
+																			<p class="boxes-order-item _active">
+																				1
+																			</p>
+																			<p class="boxes-order-item">2</p>
+																			<p class="boxes-order-item">3</p>
+																			<p class="boxes-order-item">4</p>
+																			<p class="boxes-order-item">5</p>
+																			<p class="boxes-order-item">6</p>
+																			<p class="boxes-order-item">7</p>
+																			<p class="boxes-order-item">8</p>
+																			<p class="boxes-order-item">9</p>
+																			<p class="boxes-order-item">10</p>
+																		</div>
+																		<div class="time-lines">
+																			<div class="time-line-item">
+																				<p>Avg. Entry Price</p>
+																				<span>52,555.9</span>
+																			</div>
+																		</div>
+																		<div class="btns-block">
+																			<button class="btn green">
+																				Buy / Long
+																			</button>
+																			<button class="btn red">
+																				Sell / Short
+																			</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tabs__body">
+														<div data-tabs class="tabs">
+															<nav data-tabs-titles class="tabs__navigation second-tabs">
+																<button type="button" class="tabs__title _tab-active">
+																	Limit
+																</button>
+																<button type="button" class="tabs__title">
+																	Market
+																</button>
+															</nav>
+															<div data-tabs-body class="tabs__content">
+																<div class="tabs__body">
+																	<div class="result-input">
+																		<h3>Order Price</h3>
+																		<p>
+																			<span>45,315.39</span>
+																			<span>USDT</span>
+																		</p>
+																	</div>
+																	<div class="result-input">
+																		<h3>Quantity</h3>
+																		<p>
+																			<span id="limit-result">1.4582</span>
+																			<span>BTC</span>
+																		</p>
+																	</div>
+																	<div class="range-slider range-slider--dotted">
+																		<input class="range-slider__input js-dotted-range-slider" id="" type="range" value="2" min="0" max="100" />
+																	</div>
+																	<div class="btns-block">
+																		<button class="btn green">
+																			Buy / Long
+																		</button>
+																		<button class="btn red">
+																			Sell / Short
+																		</button>
+																	</div>
+																</div>
+																<div class="tabs__body">
+																	<div class="result-input">
+																		<h3>Quantity</h3>
+																		<p>
+																			<span id="limit-result">1.4582</span>
+																			<span>BTC</span>
+																		</p>
+																	</div>
+																	<div class="range-slider range-slider--dotted">
+																		<input class="range-slider__input js-dotted-range-slider" type="range" value="2" min="0" max="100" />
+																	</div>
+																	<div class="btns-block">
+																		<button class="btn green">
+																			Buy / Long
+																		</button>
+																		<button class="btn red">
+																			Sell / Short
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<div id="popup-login" aria-hidden="true" class="popup register-login">
+		<div class="popup__wrapper">
+			<div class="popup__content register-login">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text">
+					<h2>Log In to ArcaneNews</h2>
+					<form>
+						<div class="input-item">
+							<input type="email" class="input" placeholder="Enter email address" required>
+						</div>
+						<div class="input-item">
+							<input type="password" class="input" placeholder="Enter Password" required>
+						</div>
+						<div class="row-flex">
+							<div class="checkbox">
+								<input name="size-presets" type="checkbox" class="checkbox__input" id="size-presets-checkbox-login">
+								<label for="size-presets-checkbox-login" class="checkbox__label">
+									Remember me
+								</label>
+							</div>
+							<p class="reset" data-popup="#popup-reset">Forgot password?</p>
+						</div>
+						<div class="btns-form">
+							<button type="submit" class="btn btn-primary">Log In</button>
+							<span class="or">OR</span>
+							<button type="button" class="btn btn-secondary btn-discord">Log In with Discord</button>
+						</div>
+						<div class="link-for-login">
+							<p>Don’t have an account yet? <span data-popup="#popup-register">Register</span></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-register" aria-hidden="true" class="popup register-login">
+		<div class="popup__wrapper">
+			<div class="popup__content register-login">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text">
+					<h2>Sign Up to ArcaneNews</h2>
+					<form>
+						<div class="input-item">
+							<input type="email" class="input" placeholder="Enter email address" required>
+						</div>
+						<div class="input-item">
+							<input type="password" class="input" placeholder="Enter Password" required>
+						</div>
+						<div class="checkbox">
+							<input name="size-presets" type="checkbox" class="checkbox__input" id="size-presets-checkbox-register">
+							<label for="size-presets-checkbox-register" class="checkbox__label">
+								Remember me
+							</label>
+						</div>
+						<div class="btns-form">
+							<button type="submit" class="btn btn-primary">Register Account</button>
+							<span class="or">OR</span>
+							<button type="button" class="btn btn-secondary btn-discord">Register with Discord</button>
+						</div>
+						<div class="link-for-login">
+							<p>Already have an account? <span data-popup="#popup-login">Log In</span></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-reset" aria-hidden="true" class="popup register-login">
+		<div class="popup__wrapper">
+			<div class="popup__content register-login">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text">
+					<h2>Reset your password</h2>
+					<form>
+						<div class="input-item">
+							<input type="email" class="input" placeholder="Enter email address" required>
+						</div>
+						<div class="btns-form">
+							<button type="submit" class="btn btn-primary" data-popup="#popup-new-password">Reset Password</button>
+						</div>
+						<div class="link-for-login">
+							<p>Already have an account? <span data-popup="#popup-login">Log In</span></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-new-password" aria-hidden="true" class="popup register-login">
+		<div class="popup__wrapper">
+			<div class="popup__content register-login">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text">
+					<h2>Enter a new password</h2>
+					<form>
+						<div class="input-item">
+							<input type="password" class="input" placeholder="Enter new password" required>
+						</div>
+						<div class="input-item">
+							<input type="password" class="input" placeholder="Confirm new password" required>
+						</div>
+						<div class="btns-form">
+							<button type="submit" class="btn btn-primary" data-close>Reset Password</button>
+						</div>
+						<div class="link-for-login">
+							<p>Already have an account? <span data-popup="#popup-login">Log In</span></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-share" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content share-window">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text">
+					<h2>Share your position</h2>
+					<div>
+						<div class="swiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<picture><source srcset="img/share-img.webp" type="image/webp"><img src="img/share-img.png" class="img" alt="Share" /></picture>
+								</div>
+								<div class="swiper-slide">
+									<picture><source srcset="img/share-img.webp" type="image/webp"><img src="img/share-img.png" class="img" alt="Share" /></picture>
+								</div>
+								<div class="swiper-slide">
+									<picture><source srcset="img/share-img.webp" type="image/webp"><img src="img/share-img.png" class="img" alt="Share" /></picture>
+								</div>
+							</div>
+							<!-- If we need navigation buttons -->
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="share-btns">
+							<button class="btn copy-image">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+									<path d="M5 1H11.3111C13.3024 1 14.2981 1 15.0586 1.38753C15.7277 1.72842 16.2716 2.27235 16.6125 2.94137C17 3.70194 17 4.69759 17 6.68889V13M3.84444 17H11.0444C12.0401 17 12.5379 17 12.9182 16.8062C13.2527 16.6358 13.5247 16.3638 13.6951 16.0293C13.8889 15.649 13.8889 15.1512 13.8889 14.1556V6.95556C13.8889 5.95991 13.8889 5.46208 13.6951 5.08179C13.5247 4.74728 13.2527 4.47532 12.9182 4.30488C12.5379 4.11111 12.0401 4.11111 11.0444 4.11111H3.84444C2.8488 4.11111 2.35097 4.11111 1.97068 4.30488C1.63617 4.47532 1.36421 4.74728 1.19377 5.08179C1 5.46208 1 5.95991 1 6.95556V14.1556C1 15.1512 1 15.649 1.19377 16.0293C1.36421 16.3638 1.63617 16.6358 1.97068 16.8062C2.35097 17 2.8488 17 3.84444 17Z" stroke="#EDEDED" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+								Copy Image
+							</button>
+							<button class="btn btn-share">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+									<path d="M0.0416787 0L6.64177 8.82495L0 16H1.4948L7.30965 9.71813L12.0079 16H17.0947L10.1233 6.67867L16.3054 0H14.8106L9.45542 5.78548L5.12853 0H0.0416787ZM2.23989 1.10107H4.5768L14.8962 14.8988H12.5593L2.23989 1.10107Z" fill="#EDEDED" />
+								</svg>
+								Share
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script id="script-1" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240408224319"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240408224319"></script>
+	<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js?_v=20240408224319"></script>
+	<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js?_v=20240408224319"></script>
+	<script id="script-4" type="text/javascript" src="js/app.min.js?_v=20240408224319"></script>
+
+</body>
+
+</html>
